@@ -1,0 +1,40 @@
+// * Import Font-Family
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+
+// * Color font 
+$bodycolor : #F6F6F6;
+$black: #0B132A;
+$normal: #4F5665;
+$white: #FFFFFF;
+$red:#F53838;
+$vector:#EEEFF2;
+$bordercolor: #DDDDDD;
+
+
+//* Variable 
+
+.d-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.d-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.section{
+    padding: 10rem 0 4rem;
+}
+%center{
+    text-align: center;
+}
+:root{
+    --pb1:5px;
+    --pb3:30px;
+    --pb4:40px;
+    --pb6:65px;
+    --pb7:80px;
+}
