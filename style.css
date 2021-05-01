@@ -62,7 +62,6 @@ a {
 }
 
 .navbar {
-  width: 100%;
   padding-top: 1rem;
 }
 
@@ -70,20 +69,16 @@ a {
   padding-top: 1rem;
 }
 
-.navbar__bar--item {
-  display: inline-block;
-}
-
 @media screen and (max-width: 775px) {
   .navbar__bar {
     display: none;
     position: fixed;
-    top: 200%;
+    top: 100%;
     width: 90%;
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 2.5rem  0 0;
+    padding: 30px 0px;
     text-align: center;
     background-color: #fefbfb;
     -webkit-transition: .4s;
@@ -97,13 +92,11 @@ a {
 @media screen and (max-width: 388px) {
   .navbar__bar {
     display: none;
-    position: fixed;
-    top: 100%;
+    position: absolute;
     left: 0;
-    right: 0;
+    top: 100%;
     width: 90%;
     margin: 0 auto;
-    padding: 50px 0px;
     text-align: center;
     background-color: #fefbfb;
     -webkit-transition: .4s;
@@ -116,6 +109,21 @@ a {
 
 .navbar__bar--item {
   margin-bottom: 25px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 775px) {
+  .navbar__bar--item {
+    display: block;
+    margin: 30px 0;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .navbar__bar--item {
+    display: block;
+    margin: 15px 0;
+  }
 }
 
 .navbar__bar--item a {
@@ -124,18 +132,6 @@ a {
   color: #4F5665;
   font-size: 16px;
   font-weight: 400;
-}
-
-@media screen and (max-width: 775px) {
-  .navbar__bar--item a {
-    padding: 10rem;
-  }
-}
-
-@media screen and (max-width: 388px) {
-  .navbar__bar--item a {
-    padding: 5rem;
-  }
 }
 
 .navbar__bar--item a:hover {
@@ -222,31 +218,6 @@ a {
   }
 }
 
-.content__right {
-  padding-top: 50px;
-  z-index: 1;
-}
-
-@media screen and (min-width: 776px) and (max-width: 1400px) {
-  .content__right img {
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 775px) {
-  .content__right img {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 388px) {
-  .content__right img {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-}
-
 .content__left h1 {
   font-size: 40px;
   line-height: 1.5;
@@ -312,6 +283,30 @@ a {
 .content__left p .another__span {
   font-size: 16px;
   font-weight: bold;
+}
+
+.content__img {
+  padding-top: 50px;
+}
+
+@media screen and (min-width: 776px) and (max-width: 1400px) {
+  .content__img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .content__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .content__img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 
 .content .button__main {

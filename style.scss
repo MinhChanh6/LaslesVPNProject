@@ -17,22 +17,18 @@ a{
     text-decoration: none;
 }
 .navbar{
-    width: 100%;
     padding-top:1rem;
     &__bar{
         padding-top: 1rem;
-        &--item{
-            display: inline-block;
-        }
             @include tablet{
                 display:none;
                 position: fixed;
-                top: 200%;
+                top: 100%;
                 width: 90%;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
-                padding: 2.5rem  0 0;
+                padding: 30px 0px;
                 text-align: center;
                 background-color: #fefbfb;
                 transition: .4s;
@@ -40,14 +36,12 @@ a{
                 border-radius: 2rem;
             }
             @include mobile{
-                display:none;
-                position: fixed;
-                top: 100%;
+                display: none;
+                position: absolute;
                 left: 0;
-                right: 0;
+                top: 100%;
                 width: 90%;
                 margin: 0 auto;
-                padding: 50px 0px;
                 text-align: center;
                 background-color: #fefbfb;
                 transition: .4s;
@@ -57,19 +51,21 @@ a{
             
         &--item{
             margin-bottom: 25px;
+            display: inline-block;
+            @include tablet {
+                display: block;
+                margin: 30px 0;
+            }
+            @include mobile {
+                display: block;
+                margin: 15px 0;
+            }
             a{
                 padding:1rem;
                 text-decoration: none;
                 color: $normal;
                 font-size: 16px;
                 font-weight: 400;
-                @include tablet {
-                    padding: 10rem;
-                }
-                @include mobile {
-                    padding: 5rem;
-                }
-                
                 &:hover {
                     color: $red;
                     transition: ease-in-out 0.3s;
@@ -127,23 +123,6 @@ a{
         flex-direction: column-reverse;
         justify-content: center;
     }
-    &__right {
-        padding-top: 50px;
-        z-index: 1;
-        img {
-            @include desktop{
-               max-width: 100%;
-            }
-            @include tablet {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            @include mobile {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-        }
-    }
     &__left{
         h1{
             font-size: 40px;
@@ -189,8 +168,20 @@ a{
             }
         }
     }
-    
-
+    &__img {
+        padding-top: 50px;
+        @include desktop{
+            max-width: 100%;
+         }
+         @include tablet {
+             width: 100%;
+             margin-bottom: 20px;
+         }
+         @include mobile {
+             width: 100%;
+             margin-bottom: 15px;
+         }
+    }
     .button__main{
         padding: 20px 70px;
         border:1px solid $red;
