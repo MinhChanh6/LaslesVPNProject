@@ -1,6 +1,5 @@
-$('.burger').on('click', function(event){
-    
-    $('.navbar__bar').slideToggle('200');
+$('.burger').on('click', function(){
+    $('.navbar__bar').slideToggle('300');
 })
 
 const str = ScrollReveal(
@@ -43,3 +42,9 @@ str.reveal(`.footer__content`,{
     origin:'bottom',
     interval:200,
 })
+
+// const scroll = new SmoothSroll('.navbar [href*="#"]',{
+//     speed:700
+// });
+
+

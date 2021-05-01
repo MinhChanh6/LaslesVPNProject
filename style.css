@@ -78,7 +78,7 @@ a {
   .navbar__bar {
     display: none;
     position: fixed;
-    top: 100px;
+    top: 200%;
     width: 90%;
     left: 0;
     right: 0;
@@ -91,7 +91,6 @@ a {
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
-    z-index: 100;
   }
 }
 
@@ -99,7 +98,7 @@ a {
   .navbar__bar {
     display: none;
     position: fixed;
-    top: 100px;
+    top: 100%;
     left: 0;
     right: 0;
     width: 90%;
@@ -112,7 +111,6 @@ a {
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
-    z-index: 100;
   }
 }
 
@@ -130,7 +128,7 @@ a {
 
 @media screen and (max-width: 775px) {
   .navbar__bar--item a {
-    padding: 9rem;
+    padding: 10rem;
   }
 }
 
@@ -144,6 +142,10 @@ a {
   color: #F53838;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
+}
+
+.bx {
+  color: #0B132A;
 }
 
 .burger {
@@ -179,33 +181,11 @@ a {
   }
 }
 
-@media screen and (max-width: 775px) {
-  .button {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 388px) {
-  .button {
-    display: none;
-  }
-}
-
-.button__signup {
-  border: 1px solid #F53838;
-  padding: 10px 40px;
-  border-radius: 25px;
-  color: #F53838;
-  margin-left: 25px;
-}
-
-.button__signup:hover {
-  background-color: #F53838;
-  color: white;
-}
-
 .content {
-  padding: 5rem 3rem;
+  width: 100%;
+  max-width: 1440px;
+  padding: 3rem 2rem;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 776px) and (max-width: 1400px) {
@@ -244,19 +224,18 @@ a {
 
 .content__right {
   padding-top: 50px;
+  z-index: 1;
 }
 
 @media screen and (min-width: 776px) and (max-width: 1400px) {
   .content__right img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 775px) {
   .content__right img {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
     margin-bottom: 20px;
   }
 }
@@ -264,60 +243,60 @@ a {
 @media screen and (max-width: 388px) {
   .content__right img {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
     margin-bottom: 15px;
   }
 }
 
-.content h1 {
+.content__left h1 {
+  font-size: 40px;
+  line-height: 1.5;
   padding-bottom: 25px;
 }
 
 @media screen and (min-width: 776px) and (max-width: 1400px) {
-  .content h1 {
+  .content__left h1 {
     font-size: 30px;
   }
 }
 
 @media screen and (max-width: 775px) {
-  .content h1 {
+  .content__left h1 {
     font-size: 25px;
     padding-bottom: 15px;
   }
 }
 
 @media screen and (max-width: 388px) {
-  .content h1 {
+  .content__left h1 {
     font-size: 25px;
     padding-bottom: 15px;
   }
 }
 
-.content h1 span {
+.content__left h1 span {
   font-size: 50px;
   font-weight: bold;
 }
 
 @media screen and (min-width: 776px) and (max-width: 1400px) {
-  .content h1 span {
+  .content__left h1 span {
     font-size: 33px;
   }
 }
 
 @media screen and (max-width: 775px) {
-  .content h1 span {
+  .content__left h1 span {
     font-size: 32px;
   }
 }
 
 @media screen and (max-width: 388px) {
-  .content h1 span {
+  .content__left h1 span {
     font-size: 30px;
   }
 }
 
-.content p {
+.content__left p {
   padding-bottom: var(--pb6);
   color: #4F5665;
   font-size: 16px;
@@ -325,12 +304,12 @@ a {
 }
 
 @media screen and (max-width: 388px) {
-  .content p {
+  .content__left p {
     padding-bottom: 25px;
   }
 }
 
-.content p .another__span {
+.content__left p .another__span {
   font-size: 16px;
   font-weight: bold;
 }
@@ -364,7 +343,7 @@ a {
   width: 100%;
   width: 1180px;
   height: 200px;
-  margin-left: 100px;
+  margin: auto;
   background-color: white;
   border-radius: 15px;
 }
@@ -381,8 +360,9 @@ a {
   .info {
     width: 100%;
     height: 100%;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 auto;
     padding: 0 25px;
   }
@@ -392,8 +372,9 @@ a {
   .info {
     width: 100%;
     height: 100%;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 auto;
     padding: 0 15px;
   }
@@ -446,6 +427,9 @@ a {
     border-radius: 10px;
     border: 1px solid black;
     margin-bottom: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -476,6 +460,7 @@ a {
   font-weight: 400;
   color: #4F5665;
   padding-right: 3rem;
+  display: inline-block;
 }
 
 @media screen and (max-width: 388px) {
@@ -763,6 +748,10 @@ a {
   border-radius: 15px;
 }
 
+.package__items:hover {
+  border: 1px solid #F53838;
+}
+
 @media screen and (min-width: 776px) and (max-width: 1400px) {
   .package__items {
     width: 100%;
@@ -840,6 +829,10 @@ a {
   width: 100%;
 }
 
+.location__img img {
+  width: 100%;
+}
+
 @media screen and (min-width: 776px) and (max-width: 1400px) {
   .location__img img {
     width: 100%;
@@ -856,6 +849,10 @@ a {
   .location__img img {
     width: 100%;
   }
+}
+
+.location__sponsor img {
+  width: 100%;
 }
 
 @media screen and (min-width: 776px) and (max-width: 1400px) {
@@ -878,20 +875,20 @@ a {
 
 .subscribe {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   height: 250px;
   background-color: #FFFFFF;
-  margin: -150px 100px;
-  padding: 3rem 4rem;
-  position: absolute;
+  margin: 0 auto;
+  padding: 2rem 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 776px) and (max-width: 1400px) {
@@ -981,7 +978,6 @@ a {
   color: #FFFFFF;
   line-height: 15px;
   font-size: 16px;
-  font-weight: bold;
   background-color: #F53838;
   border: 1px solid #F53838;
   border-radius: 10px;

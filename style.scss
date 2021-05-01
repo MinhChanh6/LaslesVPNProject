@@ -19,17 +19,15 @@ a{
 .navbar{
     width: 100%;
     padding-top:1rem;
-    
     &__bar{
         padding-top: 1rem;
         &--item{
             display: inline-block;
-            
         }
             @include tablet{
                 display:none;
                 position: fixed;
-                top: 100px;
+                top: 200%;
                 width: 90%;
                 left: 0;
                 right: 0;
@@ -40,12 +38,11 @@ a{
                 transition: .4s;
                 box-shadow: 0 0 4px rgba(0,0,0,.1);
                 border-radius: 2rem;
-                z-index: 100;
             }
             @include mobile{
                 display:none;
                 position: fixed;
-                top: 100px;
+                top: 100%;
                 left: 0;
                 right: 0;
                 width: 90%;
@@ -56,7 +53,6 @@ a{
                 transition: .4s;
                 box-shadow: 0 0 4px rgba(0,0,0,.1);
                 border-radius: 2rem;
-                z-index: 100;
             }
             
         &--item{
@@ -68,7 +64,7 @@ a{
                 font-size: 16px;
                 font-weight: 400;
                 @include tablet {
-                    padding: 9rem;
+                    padding: 10rem;
                 }
                 @include mobile {
                     padding: 5rem;
@@ -82,9 +78,13 @@ a{
         }
     }
 }
+.bx {
+    color: $black;
+}
 .burger{
     display:none;
     font-size:30px;
+
     @include tablet{
         position: absolute;
         display: block;
@@ -106,28 +106,12 @@ a{
     }
    
 }
-.button{
-    @include tablet{
-        display: none;
-    }
-    @include mobile{
-        display: none;
-    }
-    
-    &__signup{
-        border: 1px solid $red;
-        padding: 10px 40px;
-        border-radius: 25px;
-        color: $red;
-        margin-left: 25px;
-        &:hover{
-            background-color: $red;
-            color:white;
-        }
-    }
-}
+
 .content{
-    padding: 5rem 3rem;
+    width: 100%;
+    max-width: 1440px;
+    padding: 3rem 2rem;
+    margin: 0 auto;
     @include desktop{
         padding: 5rem 2rem;
     }
@@ -145,63 +129,67 @@ a{
     }
     &__right {
         padding-top: 50px;
+        z-index: 1;
         img {
             @include desktop{
-                width: 100%;
+               max-width: 100%;
             }
             @include tablet {
                 width: 100%;
-                object-fit: cover;
                 margin-bottom: 20px;
             }
             @include mobile {
                 width: 100%;
-                object-fit: cover;
                 margin-bottom: 15px;
             }
         }
     }
-    h1{
-        padding-bottom: 25px;
-        @include desktop{
-            font-size:30px
-        }
-        @include tablet {
-            font-size: 25px;
-            padding-bottom: 15px;
-        }
-        @include mobile {
-            font-size: 25px;
-            padding-bottom: 15px;
-        }
-        span {
-            font-size: 50px;
-            font-weight: bold;
-            @include desktop {
-                font-size: 33px;
+    &__left{
+        h1{
+            font-size: 40px;
+            line-height: 1.5;
+            padding-bottom: 25px;
+            @include desktop{
+                font-size:30px
             }
             @include tablet {
-                font-size: 32px;
+                font-size: 25px;
+                padding-bottom: 15px;
             }
             @include mobile {
-                font-size: 30px;
+                font-size: 25px;
+                padding-bottom: 15px;
+            }
+            span {
+                font-size: 50px;
+                font-weight: bold;
+                @include desktop {
+                    font-size: 33px;
+                }
+                @include tablet {
+                    font-size: 32px;
+                }
+                @include mobile {
+                    font-size: 30px;
+                }
+            }
+        }
+    
+        p{
+            padding-bottom: var(--pb6);
+            color: $normal;
+            font-size: 16px;
+            line-height: 30px;
+            @include mobile {
+                padding-bottom: 25px;
+            }
+            .another__span{
+                font-size: 16px;
+                font-weight: bold;
             }
         }
     }
-
-    p{
-        padding-bottom: var(--pb6);
-        color: $normal;
-        font-size: 16px;
-        line-height: 30px;
-        @include mobile {
-            padding-bottom: 25px;
-        }
-        .another__span{
-            font-size: 16px;
-            font-weight: bold;
-        }
-    }
+    
 
     .button__main{
         padding: 20px 70px;
@@ -225,7 +213,7 @@ a{
     width: 100%;
     width: 1180px;
     height: 200px;
-    margin-left:100px;
+    margin: auto;
     background-color: white;
     border-radius: 15px;
     @include desktop{
@@ -236,14 +224,14 @@ a{
     @include tablet {
         width: 100%;
         height: 100%;
-        align-content: center;
+        align-items: center;
         margin: 0 auto;
         padding: 0 25px;
     }
     @include mobile {
         width: 100%;
         height: 100%;
-        align-content: center;
+        align-items: center;
         margin: 0 auto;
         padding: 0 15px;
     }
@@ -275,6 +263,7 @@ a{
             border-radius: 10px;
             border: 1px solid black;
             margin-bottom: 15px;
+            align-items: center;
         }
         @include mobile {
             width: 100%;
@@ -295,6 +284,7 @@ a{
             font-weight: 400;
             color:$normal;
             padding-right: 3rem;
+            display: inline-block;
             @include mobile {
                 font-size: 15px;
                 font-weight: 400;
@@ -480,6 +470,9 @@ a{
         padding: 80px 70px;
         border:1px solid $bordercolor;
         border-radius: 15px;
+        &:hover {
+            border:1px solid $red;
+        }
         @include desktop {
             width: 100%;
             margin-bottom: 35px;
@@ -534,6 +527,7 @@ a{
         padding:0 3rem;
         width: 100%;
         img {
+            width: 100%;
             @include desktop{
                 width: 100%;
             }
@@ -547,6 +541,7 @@ a{
     }
     &__sponsor{
         img {
+            width: 100%;
             @include desktop{
                 width: 100%;
             }
@@ -561,15 +556,14 @@ a{
 }
 .subscribe{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     height: 250px;
     background-color:$white;
-    margin:  -150px 100px;
-    padding: 3rem 4rem;
-    position: absolute;
+    margin: 0 auto;
+    padding: 2rem 4rem;
     display:flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     @include desktop {
         width: 100%;
         height: 230px;
@@ -581,7 +575,7 @@ a{
         width: 100%;
         flex-direction: column;
         padding: 0rem  0 1rem;
-        margin: 0 auto;
+         margin:0 auto;
     }
     @include mobile {
         width: 100%;
@@ -624,7 +618,6 @@ a{
             color:$white;
             line-height: 15px;
             font-size:16px;
-            font-weight: bold;
             background-color: $red;
             border: 1px solid $red;
             border-radius: 10px;
